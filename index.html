@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollar Ticker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Live pay tracker</h1>
+        <p id="dollar-amount">You have made $0.00 dollars in the last 0:00</p>
+        <label for="hourly-rate">Hourly Rate: </label>
+        <input type="number" id="hourly-rate" value="1.00" step="0.01">
+        <button onclick="updateHourlyRate()">Update Rate</button>
+    </div>
+    <script src="index.js"></script>
+    <script>
+        function updateHourlyRate() {
+            const rateInput = document.getElementById('hourly-rate');
+            hourlyRate = parseFloat(rateInput.value);
+        }
+    </script>
+</body>
+</html>
